@@ -28,7 +28,7 @@ jobs:
 
       - name: Post advisory comment
         if: ${{ steps.run.outputs.advisory && steps.run.outputs.advisory != '' }}
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           BODY: ${{ steps.run.outputs.advisory }}
         with:
